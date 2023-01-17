@@ -1,0 +1,49 @@
+﻿@model Input
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form action="@Url.Action("StartPositionPost","Home")" method="post" id="start-position-form">
+    <h4>Input Kordinatlarını giriniz</h4>
+<table>
+    <tr>
+        <td>X</td>
+        <td><input type="number" class="form-control" asp-for="@Model.UpCornerCordinate.X" /></td>
+    </tr>
+    <tr>
+        <td>Y</td>
+        <td><input type="number" class="form-control" asp-for="@Model.UpCornerCordinate.Y" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="submit" class="btn btn-primary" >Devam</button>
+        </td>
+</tr>
+</table>
+</form>
+
+@section Scripts{
+    <script>
+//$('start-position-form').on("submit", function() {
+//    $.ajax({
+//        url: '/startPositionPost',
+//        method: 'POST',
+//        data: $(this).serialize(),
+//        success: function (response) {
+//            if (response.isSuccess) {
+//                location.href = 
+//            }
+//            else {
+                
+//            }
+//        }
+//    });
+//})
+    </script>
+}
+giriş olarak x-y kordinat alcaksın bu upcornercordinate ilk bunu girmesi lazım diğer alanların açılması için js 
+
+2 tane command alıcaksın ayrı ayrı
+
+(commandların içi olucak ) => commandlarda aldığın startPositionlar ilk başta aldığın upcornercordinatetan büyük olamaz hem x hem de y
+
+commandkeysleri alırken de LRM harflerinden herhangi biri dışında başka bir şey string içinde olmamalı
